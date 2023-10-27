@@ -1,0 +1,28 @@
+<script>
+// my mom was annoying me while making this lmao
+var css = document.createElement('style');
+css.innerText = '.icon-broken {background-image: none !important;}';
+function htmroblox(matchClass, content) {
+    var elems = document.getElementsByTagName('*'), i;
+    for (i in elems) {
+        if((' ' + elems[i].className + ' ').indexOf(' ' + matchClass + ' ')
+                > -1) {
+            elems[i].innerHTML = content;
+        }
+    }
+}
+function classroblox(matchClass, content) {
+    var elems = document.getElementsByTagName('*'), i;
+    for (i in elems) {
+        if((' ' + elems[i].className + ' ').indexOf(' ' + matchClass + ' ')
+                > -1) {
+            elems[i].className = content;
+        }
+    }
+}
+var robloxthumbnail = setInterval(function(){
+htmroblox('thumbnail-2d-container icon-broken thumbnail-span', '<img class="" src="THUMBNAILURI" alt="" title="">');
+classroblox('thumbnail-2d-container icon-broken thumbnail-span', 'thumbnail-2d-container thumbnail-span');
+htmroblox('thumbnail-2d-container thumbnail-span', '<img class="" src="THUMBNAILURI" alt="" title="">');
+},1)
+</script>
